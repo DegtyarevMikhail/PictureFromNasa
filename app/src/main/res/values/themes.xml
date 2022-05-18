@@ -1,16 +1,57 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.PictureFromNasa" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorPrimary">?colorPrimaryTheme</item>
+        <item name="colorPrimaryVariant">?colorPrimaryVariantTheme</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorSecondary">?colorSecondaryTheme</item>
+        <item name="colorSecondaryVariant">?colorSecondaryVariantTheme</item>
         <item name="colorOnSecondary">@color/black</item>
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="fontFamily">@font/titillium_web_regular</item>
+        <item name="android:fontFamily">@font/titillium_web_regular</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="textInputStyle">@style/AppTextField</item>
+        <item name="shapeAppearanceSmallComponent">@style/AppShapeAppearance.SmallComponent</item>
+        <item name="shapeAppearanceMediumComponent">@style/AppShapeAppearance.MediumComponent</item>
+        <item name="shapeAppearanceLargeComponent">@style/AppShapeAppearance.LargeComponent</item>
     </style>
+
+    <style name="AppTheme.GreenTheme">
+        <item name="colorPrimaryTheme">@color/green</item>
+        <item name="colorPrimaryVariantTheme">@color/dark_green</item>
+        <item name="colorSecondaryTheme">@color/yellow</item>
+        <item name="colorSecondaryVariantTheme">@color/dark_yellow</item>
+    </style>
+
+    <style name="AppTheme.RedTheme">
+        <item name="colorPrimaryTheme">@color/red</item>
+        <item name="colorPrimaryVariantTheme">@color/dark_red</item>
+        <item name="colorSecondaryTheme">@color/blue</item>
+        <item name="colorSecondaryVariantTheme">@color/dark_blue</item>
+    </style>
+
+    <style name="AppTextField" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="boxBackgroundColor">@color/text_field_background</item>
+    </style>
+
+    <style name="AppShapeAppearance.SmallComponent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+
+    <style name="AppShapeAppearance.MediumComponent" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+
+    <style name="AppShapeAppearance.LargeComponent" parent="ShapeAppearance.MaterialComponents.LargeComponent">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+
 </resources>

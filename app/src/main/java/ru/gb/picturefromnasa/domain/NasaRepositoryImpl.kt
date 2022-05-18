@@ -1,6 +1,7 @@
 package ru.gb.picturefromnasa.domain
 
 
+import androidx.viewbinding.BuildConfig
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -25,7 +26,8 @@ class NasaRepositoryImpl : NasaRepository {
         .create(NasaApi::class.java)
 
 
-    override suspend fun pictureOfTheDay(): PictureOfTheDayResponse = api.pictureOfTheDay("KqNLF4mgINJPbYEiGuTEYV57vEIjGxDiZCpiWm0u")
-
+   // override suspend fun pictureOfTheDay(): PictureOfTheDayResponse = api.pictureOfTheDay("KqNLF4mgINJPbYEiGuTEYV57vEIjGxDiZCpiWm0u")
+   override suspend fun pictureOfTheDay(): PictureOfTheDayResponse =
+       api.pictureOfTheDay(BuildConfig.NASA_API_KEY)
 
 }
